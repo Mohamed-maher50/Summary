@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&display=swap");
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open sans";
+  -webkit-user-drag: none;
+}
+:root {
+  --griy-color: #54524f;
+  --griy-out: #7f7770;
+  --main-color: #deb37e;
+  --main-colorOpen: #e2a355;
+}
+
+/*______________________________________*/
+/* start in navbar */
+.navbar-brand img {
+  width: 80px;
+  height: 80px;
+}
+.navbar {
+  font-family: "Open sans";
+  font-size: 16.67px;
+  font-weight: bold;
+  padding: 0 6%;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 2;
+  background-color: #fff;
+}
+.navbar.active {
+  position: fixed;
+  left: 0;
+}
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  content: "";
+  transition: 0.5s linear;
+  position: absolute;
+  width: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-bottom: 2px solid var(--main-color);
+}
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+.navbar .navbar-nav .nav-item.active::after {
+  width: 100%;
+}
+.navbar .search {
+  background-color: #a39f9c;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 200px;
+  color: var(--griy-color);
+}
+.navbar .search input,
+button {
+  background-color: #a39f9c;
+  border: none;
+  outline: none;
+}
+.navbar .search input::placeholder,
+.navbar .search input {
+  color: #fff;
+  font-family: tahoma;
+  font-size: 16px;
+}
+/* /////////////////////// */
+/* start in header */
+.Header {
+  background: url(../img/Group\ 10.jpg);
+  background-size: cover;
+  min-height: 140vh;
+  overflow: hidden;
+}
+.Header .leftText {
+  margin-top: 250px;
+}
+.Header .leftText h1 {
+  color: var(--main-color);
+  font-size: 5rem;
+  font-style: bold;
+}
+.Header .leftText h3 {
+  font-size: 25px;
+  font-family: "Open sans";
+  font-style: italic;
+  color: var(--griy-color);
+}
+.Header .leftText p {
+  width: 500px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Open sans";
+  font-style: italic;
+  color: var(--griy-color);
+}
+
+/* ///////////////////////// */
+/* start in letGo */
+.letGo {
+  padding: 150px 0;
+  background-image: url(../img/ShadowLeft_.png);
+  background-position: 0% 85%;
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+.letGo h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--main-colorOpen);
+}
+.letGo p {
+  font-size: 27px;
+  color: var(--griy-out);
+  margin-top: 49px;
+}
+.letGo .row {
+  margin-top: 50px;
+}
+.letGo .row > * {
+  margin: 0;
+  padding: 0;
+}
+
+.letGo .row .card-title {
+  font-size: 29px;
+  font-weight: bold;
+  color: #fff;
+}
+.letGo .row .card img {
+  height: 250px;
+}
+.letGo .row .card-text {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 25px;
+  font-family: "Open sans";
+}
+
+.card-body {
+  background-color: var(--griy-out);
+}
+/* ////////////////////////// */
+/* start in sction map */
+.map img {
+  width: 100%;
+  height: 100%;
+}
+.map .gallary {
+  padding: 100px 0;
+}
+.map .gallary .contentText {
+  width: 70%;
+  margin: auto;
+  margin-top: 150px;
+  padding: 25px 0;
+}
+.map .gallary .contentText h1 {
+  font-size: 57px;
+  font-family: "Open sans";
+  font-weight: bold;
+  color: #fff;
+}
+.map .gallary .contentText p {
+  color: #fff;
+  line-height: 35px;
+  width: 500px;
+  margin-top: 70px;
+  font-size: 29px;
+}
+.map .gallary .contentText .link {
+  background-color: var(--main-colorOpen);
+  color: #fff;
+}
+
+.map .gallary .forText:nth-of-type(2) {
+  background-color: var(--griy-out);
+}
+.map .gallary .forText:nth-of-type(3) {
+  background-color: var(--main-color);
+}
+/* golbal */
+
+.letGo .link {
+  background-color: #54524f;
+  display: block;
+  width: 250px;
+  margin: 100px auto;
+  text-align: center;
+  color: #fff;
+}
+
+.setBorder {
+  border-bottom: 5px solid var(--main-color);
+  padding-bottom: 5px;
+}
+.link {
+  padding: 5px 15px;
+  margin-top: 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* ////////////////////////// */
+/* start in section hiking */
+.Hiking {
+  background-size: cover;
+  background-color: #99928d;
+  padding: 100px 0;
+  position: relative;
+  text-align: center;
+}
+.Hiking::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/cloud.png);
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
+}
+.Hiking::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/undercloud.png);
+  background-size: 100% 30%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.Hiking h1 {
+  margin-top: 150px;
+  font-size: 58px;
+  color: #fff;
+  font-weight: bold;
+}
+.Hiking p {
+  width: 75%;
+  margin: auto;
+  font-size: 29px;
+  color: #dbdbdb;
+  margin-top: 50px;
+}
+/* /////////////////// */
+/* start in section explore */
+
+.explore {
+  background-image: url(../img/explore.jpg);
+  background-size: cover;
+  height: 150vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.explore h1 {
+  font-size: 75px;
+  position: relative;
+  right: -50%;
+  top: 500px;
+  width: 500px;
+  font-style: italic;
+  text-align: end;
+  color: var(--main-colorOpen);
+}
+.explore h1 span {
+  color: var(--griy-color);
+}
+/* ///////////////// */
+/* start in section about us */
+
+.aboutUs {
+  padding: 100px 0;
+  background-color: #fff;
+}
+.aboutUs .row .card {
+  margin-top: 50px;
+}
+.aboutUs .row .card .card-title {
+  font-size: 33px;
+  font-weight: bold;
+  color: var(--main-colorOpen);
+}
+.aboutUs .row .card .card-text {
+  font-size: 18px;
+  color: var(--griy-color);
+}
+.aboutUs .dot {
+  font-size: 10rem;
+  color: var(--griy-out);
+  display: block;
+  transform: rotate(180deg);
+  font-weight: bold;
+  width: 100px;
+  margin: auto;
+}
+.aboutUs .text p {
+  text-align: center;
+  width: 700px;
+  font-size: 25px;
+  margin: auto;
+  color: var(--griy-out);
+}
+.aboutUs .text h4 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  color: var(--griy-color);
+  font-weight: bold;
+}
+/* //////////////////////////////// */
+/* start in section contact us */
+.contact {
+  padding: 100px 0;
+  background-image: url(../img/contact.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+.contact h1 {
+  font-size: 75px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 200px;
+  text-align: center;
+}
+.contact p {
+  width: 950px;
+  text-align: center;
+  margin: auto;
+  font-size: 29px;
+  font-weight: bold;
+  color: var(--griy-color);
+}
+.contact .form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  transform: translate(50px, 0);
+  padding-bottom: 100px;
+}
+.contact .form input {
+  width: 500px;
+  padding-left: 10px;
+}
+.contact .form input::placeholder {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contact .form input,
+button {
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+}
+.contact .form button {
+  background-color: var(--griy-color);
+  color: #fff;
+  width: 150px;
+  transform: translate(-70px, 0px);
+}
+/* //////////////////////////////////////////////// */
+/* start in footer  */
+.footer {
+  background: url(../img/undercloud.png), var(--griy-out);
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
+  background-position: 0px -100px;
+  padding: 100px;
+  color: #fff;
+  font-family: "Montserrat";
+  overflow: hidden;
+}
+.footer .row {
+  margin-top: 100px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer h3 {
+  margin: 20px 0;
+  font-size: 31px;
+}
+.footer p,
+li {
+  font-size: 19px;
+}
+
+.footer .icons i {
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 80px;
+  font-size: 24px;
+  margin-right: 10px;
+  color: var(--griy-color);
+}
