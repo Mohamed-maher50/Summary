@@ -13,7 +13,9 @@ body,
   --main-color: #deb37e;
   --main-colorOpen: #e2a355;
 }
-
+body {
+  overflow: hidden;
+}
 /*______________________________________*/
 /* start in navbar */
 .navbar-brand img {
@@ -32,7 +34,11 @@ body,
 }
 .navbar.active {
   position: fixed;
+  width: 100%;
   left: 0;
+}
+.navbar-toggler {
+  position: relative;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -280,8 +286,8 @@ button {
 
 .explore h1 {
   font-size: 75px;
-  position: relative;
-  right: -50%;
+  position: absolute;
+  left: 0%;
   top: 500px;
   width: 500px;
   font-style: italic;
@@ -321,7 +327,7 @@ button {
 }
 .aboutUs .text p {
   text-align: center;
-  width: 700px;
+  width: 80%;
   font-size: 25px;
   margin: auto;
   color: var(--griy-out);
@@ -351,7 +357,7 @@ button {
   text-align: center;
 }
 .contact p {
-  width: 950px;
+  width: 80%;
   text-align: center;
   margin: auto;
   font-size: 29px;
